@@ -1,0 +1,87 @@
+.infoContainer h1 {
+  margin: 0 auto;
+  color: #ffff;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.infoContainer ul {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0;
+}
+
+.infoContainer li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.infoContainer .windUnit {
+  text-transform: lowercase;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+.Weather {
+  border: 1px solid #ffcccc;
+  background-color: #ffcccc;
+  color: #ffff;
+  border-radius: 16px;
+  box-shadow: 9px 9px 5px #fb86be;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 40px;
+}
+.searchForm {
+  padding-bottom: 30px;
+}
+
+.pageLine hr {
+  margin-top: 0;
+}
+
+.searchForm .btn {
+  border: 1px solid #ffcccc !important;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  height: 50px;
+  color: #fa86be;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.searchForm .btn:hover {
+  background-color: #fa86be;
+  color: #ffffff;
+}
+
+.temperatureContainer {
+  text-align: right;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.cityInput {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: #ff9ac7;
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+}
+
+.githubLink {
+  text-decoration: none;
+  color: #ff6699;
+}
+
+.netlifyLink {
+  text-decoration: none;
+  color: #ff6699;
+}
