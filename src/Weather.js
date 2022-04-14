@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 export default function Weather() {
-  function handleResponse {
+  function handleResponse(response) {
     console.log(response.data);
   }
 
   const apiKey = "281450ec88936f4fa8ee9864682b49a0";
   let city = "San Francisco";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   axios.get(apiUrl).then(handleResponse);
 
   let weatherData = {
