@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import axios from "axios"
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState ({ ready: false });
@@ -19,7 +19,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000)
     });
   }
-
+  
   if (weatherData.ready) {
     return (
       <div className="container">
@@ -44,42 +44,7 @@ export default function Weather(props) {
             </div>
           </form>
           <hr className="mt-5" />
-          <div className="infoContainer mt-4">
-            <div className="row">
-              <div className="col-6">
-                <h1>{weatherData.city}</h1>
-                <ul>
-                  <strong>
-                    <li>
-                      <FormattedDate date={weatherData.date} />
-                    </li>
-                    <li>
-                      <span> {weatherData.description} </span>
-                    </li>
-                    <li>
-                      Humidity: <strong>{weatherData.humidity}%</strong>, Wind:
-                      <strong> {weatherData.wind}</strong>
-                      <span className="windUnit"> km/h </span>
-                    </li>
-                  </strong>
-                </ul>
-              </div>
-              <div className="col-6">
-                <div className="temperatureContainer">
-                  <span>
-                    <img
-                      className="weatherImage"
-                      src={weatherData.iconUrl}
-                      alt={weatherData.description}
-                    ></img>
-                  </span>
-                  <span className="temperature">{Math.round(weatherData.temperature)}</span>
-                  <span className="unit">°F</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="weatherForecast"></div>
+          <WeatherInfo data={weatherData} />
           <footer className="text-center">
             <hr className="mb-5" />
             This project was coded by Camryn Lee and is

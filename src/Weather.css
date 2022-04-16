@@ -106,6 +106,12 @@ hr {
   line-height: 70px;
 }
 
+.description {
+  position: relative;
+  right: -108px;
+  top: -23.9px;
+}
+
 .githubLink {
   text-decoration: none;
   color: #ff6699;
