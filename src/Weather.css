@@ -1,9 +1,8 @@
-
 .Weather {
-  border: 1px solid #B9B9D1;
+  border: 1px solid #b9b9d1;
   color: white;
   border-radius: 16px;
-  box-shadow: 9px 9px 5px #B9B9D1;
+  box-shadow: 9px 9px 5px #b9b9d1;
   max-width: 800px;
   margin: 30px auto;
   padding: 40px;
@@ -36,23 +35,21 @@ footer {
   margin-top: 400px;
 }
 
-
 .searchForm {
   padding-top: 20px;
 }
 
-.searchForm input:focus {  
-  outline-color: #5791A2;
-} 
-
-.searchForm input::placeholder {
-  color: #B9B9D1 !important;
+.searchForm input:focus {
+  outline-color: #5791a2;
 }
 
+.searchForm input::placeholder {
+  color: #b9b9d1 !important;
+}
 
 hr {
   margin-top: 0;
-  color: #B9B9D1 !important;
+  color: #b9b9d1 !important;
 }
 
 .searchForm .btn {
@@ -61,7 +58,7 @@ hr {
   padding: 10px 0;
   font-weight: 700;
   font-size: 20px;
-  color: #5791A2;
+  color: #5791a2;
   cursor: pointer;
   transition: 0.2s;
   margin: auto;
@@ -69,8 +66,8 @@ hr {
 
 .searchForm .btn:hover {
   opacity: 95%;
-  color: #5791A2;
-  border-color: #B9B9D1 !important;
+  color: #5791a2;
+  border-color: #b9b9d1 !important;
 }
 
 .temperatureContainer {
@@ -81,16 +78,15 @@ hr {
 
 .cityInput {
   border: none;
-  color: #B9B9D1;
+  color: #b9b9d1;
   padding: 10px 10px;
   margin: auto;
   font-size: 20px;
 }
 
 .weatherImage {
-  height: 115px;
   position: relative;
-  top: -2px;
+  bottom: -50px;
   display: inline-block;
 }
 
@@ -98,19 +94,23 @@ hr {
   font-weight: 300;
   font-size: 30px;
   position: relative;
-  top: -19px;
+  bottom: -5px;
 }
 .temperature {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 500;
-  line-height: 70px;
+  position: relative;
+  bottom: -18px;
+  margin-left: 15px;
+
 }
 
 .description {
   position: relative;
-  right: -108px;
-  top: -23.9px;
+  right: -120px;
+  top: -24px;
 }
+
 
 .githubLink {
   text-decoration: none;

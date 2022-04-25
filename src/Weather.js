@@ -4,8 +4,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios"
 import WeatherInfo from "./WeatherInfo";
 
+
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState ({ ready: false });
+  const [city, setCity] = useState(props.defaultCity)
+  const [weatherData, setWeatherData] = useState({ ready: false });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "281450ec88936f4fa8ee9864682b49a0";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+
+  }
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -15,16 +34,16 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       description: response.data.weather[0].description,
-      iconUrl: "http://openweathermap.org/img/wn/02d@2x.png",
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000)
     });
   }
-  
+
   if (weatherData.ready) {
     return (
       <div className="container">
         <div className="Weather">
-          <form className="searchForm">
+          <form onSubmit={handleSubmit} className="searchForm">
             <div className="row">
               <div className="col-9">
                 <input
@@ -32,6 +51,7 @@ export default function Weather(props) {
                   placeholder="Search for a city..."
                   className="cityInput rounded shadow w-100"
                   autoFocus="on"
+                  onChange={handleCityChange}
                 />
               </div>
               <div className="col-3">
@@ -70,10 +90,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "281450ec88936f4fa8ee9864682b49a0";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   };
 }
