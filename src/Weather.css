@@ -13,7 +13,7 @@
 
 .infoContainer h1 {
   color: white;
-  font-size: 38px;
+  font-size: 45px;
   font-weight: 700;
 }
 
@@ -88,27 +88,29 @@ hr {
   position: relative;
   bottom: -50px;
   display: inline-block;
+  margin-left: 35px;
 }
 
-.unit {
-  font-weight: 300;
-  font-size: 30px;
-  position: relative;
-  bottom: -5px;
-}
-.temperature {
+.WeatherTemperature {
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  bottom: -18px;
+  top: -48px;
+  right: -150px;
   margin-left: 15px;
+}
 
+.WeatherTemperature .unit {
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  top: -16px;
 }
 
 .description {
   position: relative;
   right: -120px;
-  top: -24px;
+  top: -22px;
 }
 
 
