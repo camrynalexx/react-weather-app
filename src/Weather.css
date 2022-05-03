@@ -3,36 +3,38 @@
   color: white;
   border-radius: 16px;
   box-shadow: 9px 9px 5px #b9b9d1;
-  max-width: 800px;
-  margin: 30px auto;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 40px;
   background-image: url(/public/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.infoContainer h1 {
+.WeatherInfo {
+  text-align: left;
+}
+
+.WeatherInfo h1 {
   color: white;
   font-size: 45px;
   font-weight: 700;
 }
 
-.infoContainer ul {
+.WeatherInfo ul {
+  
+  color: white;
   text-align: left;
   padding: 0;
 }
 
-.infoContainer li {
+.WeatherInfo li {
   list-style: none;
   text-transform: capitalize;
 }
 
-.infoContainer .windUnit {
+.WeatherInfo .windUnit {
   text-transform: lowercase;
-}
-
-footer {
-  margin-top: 400px;
 }
 
 .searchForm {
@@ -40,11 +42,11 @@ footer {
 }
 
 .searchForm input:focus {
-  outline-color: #5791a2;
+  outline-color: #02618C;
 }
 
 .searchForm input::placeholder {
-  color: #b9b9d1 !important;
+  color: #edd500 !important;
 }
 
 hr {
@@ -58,7 +60,7 @@ hr {
   padding: 10px 0;
   font-weight: 700;
   font-size: 20px;
-  color: #5791a2;
+  color: #02618C;
   cursor: pointer;
   transition: 0.2s;
   margin: auto;
@@ -66,7 +68,7 @@ hr {
 
 .searchForm .btn:hover {
   opacity: 95%;
-  color: #5791a2;
+  color: #f9d245;
   border-color: #b9b9d1 !important;
 }
 
@@ -78,7 +80,7 @@ hr {
 
 .cityInput {
   border: none;
-  color: #b9b9d1;
+  color: #02618C;
   padding: 10px 10px;
   margin: auto;
   font-size: 20px;
@@ -86,17 +88,17 @@ hr {
 
 .weatherImage {
   position: relative;
-  bottom: -50px;
+  bottom: -40px;
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 55px;
 }
 
 .WeatherTemperature {
   font-size: 50px;
   font-weight: 500;
   position: relative;
-  top: -48px;
-  right: -150px;
+  top: -57px;
+  right: -170px;
   margin-left: 15px;
 }
 
@@ -105,12 +107,23 @@ hr {
   font-weight: 300;
   position: relative;
   top: -16px;
+  right: -10px;
+}
+
+.WeatherTemperature a {
+  text-decoration: underline wavy #f9d245 2px;
+  color: #f9d245;
+}
+
+.WeatherTemperature a:hover {
+  color: #f9d245;
+  opacity: 70%;
 }
 
 .description {
   position: relative;
   right: -120px;
-  top: -22px;
+  top: -24px;
 }
 
 
@@ -123,3 +136,38 @@ hr {
   text-decoration: none;
   color: #ff6699;
 }
+
+@media (max-width: 991px) {
+
+  .WeatherInfo h1 {
+    font-size: 35px;
+  }
+
+  .WeatherInfo .ul {
+    margin-left: 0;
+  }
+
+  .description {
+    position: static;
+    text-align: left;
+  }
+
+  .weatherImage {
+   margin-left: 40px;
+   position: static;
+  }
+
+  .WeatherTemperature {
+    font-size: 25px;
+    margin-left: 45px;
+    position: static;
+  }
+
+  .WeatherTemperature .unit {
+    font-size: 10px;
+    position: relative;
+  }
+
+}
+
+
