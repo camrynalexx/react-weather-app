@@ -1,0 +1,22 @@
+.WeatherForecast {
+  text-align: center;
+  font-size: 20px;
+}
+
+.WeatherForecast .col {
+  border: 10px dotted white!important;
+  color: black;
+  opacity: 90%;
+}
+
+.WeatherForecast-day {
+  font-weight: 600;
+}
+
+.WeatherForecast-temp {
+  font-weight: 600;
+}
+
+.WeatherTemp-min {
+  opacity: 75%;
+}
