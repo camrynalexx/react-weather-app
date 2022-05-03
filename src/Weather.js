@@ -3,6 +3,7 @@ import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios"
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -29,6 +30,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -63,8 +65,9 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <hr className="mt-5" />
+          <hr className="mt-3" />
           <WeatherInfo data={weatherData} />
+          <WeatherForecast coordinates={weatherData.coordinates} />
           <footer className="text-center">
             <hr className="mb-5" />
             This project was coded by Camryn Lee and is
