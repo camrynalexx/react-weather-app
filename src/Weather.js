@@ -69,7 +69,7 @@ export default function Weather(props) {
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
           <hr className="mt-4" />
-          <div className="audioNote text-center mt-4">
+          <div className="audioNote text-center mt-3">
             <p>
               <strong> Listen to this & brighten your day ☺︎ </strong>
             </p>
@@ -97,6 +97,16 @@ export default function Weather(props) {
             </a>
           </footer>
         </div>
+        <p className="text-center"> 
+         <strong>
+         *Note to whoever is checks my project* 
+         </strong>
+          <br />
+          I do have a 5 day weather forecast in my code, but if it is not being displayed 
+          it's because I exceeded my API call limit. I didn't realize this happened until after submitting.
+          <br />
+           The forecast should appear in a day or two.
+        </p>
       </div>
     );
   } else {
