@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios"
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
-import Audio from "./AudioPlayer";
+import AudioPlayer from "./AudioPlayer";
 
 
 export default function Weather(props) {
@@ -45,7 +45,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="container">
-        <div className="Weather">
+        <div className="Weather mt-3 mb-3">
           <form onSubmit={handleSubmit} className="searchForm">
             <div className="row">
               <div className="col-9">
@@ -69,29 +69,35 @@ export default function Weather(props) {
           <hr className="mt-3" />
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
-          <hr className="mb-5" />
-          <Audio />
+          <hr className="mt-4" />
+          <div className="audioNote text-center mt-4">
+            <p>
+              <strong> Listen to this to brighten your day ☺︎ </strong>
+            </p>
+          </div>
+          <AudioPlayer />
+
+          <footer className="text-center mt-4">
+            This project was coded by Camryn Lee and is
+            <a
+              href="https://github.com/camrynalexx/react-weather-app.git"
+              target=""
+              className="githubLink"
+            >
+              {" "}
+              open-sourced on GitHub
+            </a>{" "}
+            and
+            <a
+              href="https://playful-kataifi-93547f.netlify.app"
+              target=""
+              className="netlifyLink"
+            >
+              {" "}
+              hosted on Netlify
+            </a>
+          </footer>
         </div>
-        <footer className="text-center mt-4">
-          This project was coded by Camryn Lee and is
-          <a
-            href="https://github.com/camrynalexx/react-weather-app.git"
-            target=""
-            className="githubLink"
-          >
-            {" "}
-            open-sourced on GitHub
-          </a>{" "}
-          and
-          <a
-            href="https://playful-kataifi-93547f.netlify.app"
-            target=""
-            className="netlifyLink"
-          >
-            {" "}
-            hosted on Netlify
-          </a>
-        </footer>
       </div>
     );
   } else {
