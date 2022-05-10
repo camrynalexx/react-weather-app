@@ -21,3 +21,13 @@
 .WeatherTemp-min {
   opacity: 75%;
 }
+
+@media (max-width: 989px) {
+  .WeatherForecast{
+    font-size: 15px;
+  }
+
+  .WeatherForecast .col {
+    border: 6px double white !important;
+  }
+}
