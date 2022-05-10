@@ -22,7 +22,6 @@
 }
 
 .WeatherInfo ul {
-  
   color: white;
   text-align: left;
   padding: 0;
@@ -42,7 +41,7 @@
 }
 
 .searchForm input:focus {
-  outline-color: #02618C;
+  outline-color: #02618c;
 }
 
 .searchForm input::placeholder {
@@ -51,16 +50,17 @@
 
 hr {
   margin-top: 0;
-  color: #b9b9d1 !important;
+  color: #edd500 !important;
 }
 
 .searchForm .btn {
   border: 1px solid white !important;
+  display: block;
   background-color: #ffffff;
   padding: 10px 0;
   font-weight: 700;
   font-size: 20px;
-  color: #02618C;
+  color: #02618c;
   cursor: pointer;
   transition: 0.2s;
   margin: auto;
@@ -80,7 +80,7 @@ hr {
 
 .cityInput {
   border: none;
-  color: #02618C;
+  color: #02618c;
   padding: 10px 10px;
   margin: auto;
   font-size: 20px;
@@ -104,7 +104,7 @@ hr {
 
 .WeatherTemperature .unit {
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 400;
   position: relative;
   top: -16px;
   right: -10px;
@@ -126,7 +126,6 @@ hr {
   top: -24px;
 }
 
-
 .githubLink {
   text-decoration: none;
   color: #ff6699;
@@ -137,14 +136,13 @@ hr {
   color: #ff6699;
 }
 
-@media (max-width: 991px) {
-
+@media (max-width: 989px) {
   .WeatherInfo h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
-  .WeatherInfo .ul {
-    margin-left: 0;
+  .WeatherInfo li {
+    font-size: 14px;
   }
 
   .description {
@@ -153,21 +151,26 @@ hr {
   }
 
   .weatherImage {
-   margin-left: 40px;
-   position: static;
+    margin-left: 40px;
+    position: static;
   }
 
   .WeatherTemperature {
-    font-size: 25px;
-    margin-left: 45px;
+    font-size: 30px;
+    margin-left: 35px;
     position: static;
   }
 
   .WeatherTemperature .unit {
-    font-size: 10px;
+    font-size: 13px;
     position: relative;
+    right: -7px;
+    color: black;
+  }
+
+  .WeatherTemperature a {
+    text-decoration: underline wavy white 2px;
+    color: white;
   }
 
 }
-
-
