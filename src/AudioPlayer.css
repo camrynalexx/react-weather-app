@@ -1,7 +1,3 @@
-:root {
-  --btn-primary-color: #ff6699;
-  --btn-secondary-color: #f9d245;
-}
 
 .AudioPlayer {
   display: flex;
@@ -9,8 +5,8 @@
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: #ede4a2;
-  opacity: 60%;
+  background-color: #ffdd7d;
+  opacity: 75%;
 }
 
 audio::-webkit-media-controls-mute-button {

@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from "axios"
+import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import AudioPlayer from "./AudioPlayer";
 
-
 export default function Weather(props) {
-  const [city, setCity] = useState(props.defaultCity)
+  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(event) {
     event.preventDefault();
-   search();
+    search();
   }
-  
+
   function handleCityChange(event) {
     setCity(event.target.value);
   }
 
-    function search() {
-    const apiKey = "6aaf3970b6c5ec8d7f27f8c3c5d752f9"; 
+  function search() {
+    const apiKey = "6aaf3970b6c5ec8d7f27f8c3c5d752f9";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-
-  } 
+  }
 
   function handleResponse(response) {
     console.log(response.data);
@@ -38,7 +36,7 @@ export default function Weather(props) {
       city: response.data.name,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      date: new Date(response.data.dt * 1000)
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -73,7 +71,7 @@ export default function Weather(props) {
           <hr className="mt-4" />
           <div className="audioNote text-center mt-4">
             <p>
-              <strong> Listen to this to brighten your day ☺︎ </strong>
+              <strong> Listen to this & brighten your day ☺︎ </strong>
             </p>
           </div>
           <AudioPlayer />
@@ -102,7 +100,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search(); 
+    search();
     return "Loading...";
-  };
+  }
 }

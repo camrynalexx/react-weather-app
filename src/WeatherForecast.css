@@ -4,10 +4,11 @@
 }
 
 .WeatherForecast .col {
-  border: 10px dotted white!important;
+  border: 9px dotted white !important;
   color: black;
   opacity: 90%;
 }
+
 
 .WeatherForecast-day {
   font-weight: 600;

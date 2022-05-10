@@ -1,3 +1,7 @@
+:root {
+  --accent-color: #ffdd7d;
+}
+
 .Weather {
   border: 1px solid #b9b9d1;
   color: white;
@@ -12,19 +16,23 @@
   font-family: "Abril Fatface", cursive;
 }
 
+.Weather .greeting {
+  font-family: "Zen Loop", cursive;
+  font-size: 60px;
+}
+
 .WeatherInfo {
   text-align: left;
 }
 
 .WeatherInfo h1 {
-  color: white;
+  color: var(--accent-color);
   font-size: 45px;
   font-weight: 600;
   font-family: "Abril Fatface", cursive;
 }
 
 .WeatherInfo ul {
-  color: white;
   text-align: left;
   padding: 0;
 }
@@ -47,12 +55,12 @@
 }
 
 .searchForm input::placeholder {
-  color: #edd500 !important;
+  color: var(--accent-color) !important;
 }
 
 hr {
   margin-top: 0;
-  color: #edd500 !important;
+  color: var(--accent-color) !important;
 }
 
 .searchForm .btn {
@@ -70,7 +78,7 @@ hr {
 
 .searchForm .btn:hover {
   opacity: 95%;
-  color: #f9d245;
+  color: var(--accent-color);
   border-color: #b9b9d1 !important;
 }
 
@@ -113,23 +121,23 @@ hr {
 }
 
 .WeatherTemperature a {
-  text-decoration: underline wavy #f9d245 2px;
-  color: #f9d245;
+  text-decoration: underline wavy var(--accent-color) 2px;
+  color: var(--accent-color);
 }
 
 .WeatherTemperature a:hover {
-  color: #f9d245;
+  color: var(--accent-color);
   opacity: 70%;
 }
 
 .description {
   position: relative;
-  right: -115px;
+  right: -117px;
   top: -24px;
 }
 
 .audioNote {
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Zen Loop", cursive;
   position: relative;
   top: 15px;
@@ -141,16 +149,30 @@ footer {
 }
 
 .githubLink {
-  text-decoration: none;
-  color: #ff6699;
+  text-decoration: 2.5px underline dashed white;
+  color: black;
+}
+
+.githubLink:hover {
+  color: black;
+  opacity: 75%;
 }
 
 .netlifyLink {
-  text-decoration: none;
-  color: #ff6699;
+  text-decoration: 2.5px underline dashed white;
+  color: black;
+}
+
+.netlifyLink:hover {
+  color: black;
+  opacity: 75%;
 }
 
 @media (max-width: 989px) {
+  .Weather .greeting {
+    font-size: 45px;
+  }
+
   .WeatherInfo h1 {
     font-size: 30px;
   }
@@ -183,7 +205,7 @@ footer {
   }
 
   .WeatherTemperature a {
-    text-decoration: underline wavy white 2px;
+    text-decoration: underline wavy white 1.5px;
     color: white;
   }
 
