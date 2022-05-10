@@ -46,6 +46,7 @@ export default function Weather(props) {
     return (
       <div className="container">
         <div className="Weather mt-3 mb-3">
+          <h1 className="greeting text-center">Welcome✌︎</h1>
           <form onSubmit={handleSubmit} className="searchForm">
             <div className="row">
               <div className="col-9">
