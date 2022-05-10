@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios"
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import Audio from "./AudioPlayer";
 
 
 export default function Weather(props) {
@@ -12,19 +13,19 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+   search();
   }
   
   function handleCityChange(event) {
     setCity(event.target.value);
   }
 
-  function search() {
-    const apiKey = "281450ec88936f4fa8ee9864682b49a0";
+    function search() {
+    const apiKey = "6aaf3970b6c5ec8d7f27f8c3c5d752f9"; 
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-  }
+  } 
 
   function handleResponse(response) {
     console.log(response.data);
@@ -68,32 +69,33 @@ export default function Weather(props) {
           <hr className="mt-3" />
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
-          <footer className="text-center">
-            <hr className="mb-5" />
-            This project was coded by Camryn Lee and is
-            <a
-              href="https://github.com/camrynalexx/react-weather-app.git"
-              target=""
-              className="githubLink"
-            >
-              {" "}
-              open-sourced on GitHub
-            </a>{" "}
-            and
-            <a
-              href="https://playful-kataifi-93547f.netlify.app"
-              target=""
-              className="netlifyLink"
-            >
-              {" "}
-              hosted on Netlify
-            </a>
-          </footer>
+          <hr className="mb-5" />
+          <Audio />
         </div>
+        <footer className="text-center mt-4">
+          This project was coded by Camryn Lee and is
+          <a
+            href="https://github.com/camrynalexx/react-weather-app.git"
+            target=""
+            className="githubLink"
+          >
+            {" "}
+            open-sourced on GitHub
+          </a>{" "}
+          and
+          <a
+            href="https://playful-kataifi-93547f.netlify.app"
+            target=""
+            className="netlifyLink"
+          >
+            {" "}
+            hosted on Netlify
+          </a>
+        </footer>
       </div>
     );
   } else {
-    search();
+    search(); 
     return "Loading...";
   };
 }
