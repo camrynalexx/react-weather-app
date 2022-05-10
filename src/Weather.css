@@ -9,6 +9,7 @@
   background-image: url(/public/background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Abril Fatface", cursive;
 }
 
 .WeatherInfo {
@@ -18,7 +19,8 @@
 .WeatherInfo h1 {
   color: white;
   font-size: 45px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "Abril Fatface", cursive;
 }
 
 .WeatherInfo ul {
@@ -122,8 +124,20 @@ hr {
 
 .description {
   position: relative;
-  right: -120px;
+  right: -115px;
   top: -24px;
+}
+
+.audioNote {
+  font-size: 20px;
+  font-family: "Zen Loop", cursive;
+  position: relative;
+  top: 15px;
+}
+
+footer {
+  color: black;
+  font-weight: 500;
 }
 
 .githubLink {
