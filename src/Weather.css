@@ -132,8 +132,9 @@ hr {
 }
 
 .description {
+  display: inline-block;
   position: relative;
-  right: -140px;
+  right: -130px;
   top: -24px;
 }
 
@@ -149,22 +150,17 @@ footer {
   font-weight: 500;
 }
 
-.githubLink {
+footer p {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
+footer a {
   text-decoration: 2.5px underline dashed white;
   color: black;
 }
 
-.githubLink:hover {
-  color: black;
-  opacity: 75%;
-}
-
-.netlifyLink {
-  text-decoration: 2.5px underline dashed white;
-  color: black;
-}
-
-.netlifyLink:hover {
+footer a:hover{
   color: black;
   opacity: 75%;
 }

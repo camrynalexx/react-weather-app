@@ -43,7 +43,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="container">
-        <div className="Weather mt-3 mb-3">
+        <div className="Weather mt-3 mb-4">
           <h1 className="greeting text-center">Welcome✌︎</h1>
           <form onSubmit={handleSubmit} className="searchForm">
             <div className="row">
@@ -77,10 +77,20 @@ export default function Weather(props) {
           <AudioPlayer />
 
           <footer className="text-center mt-4">
-            This project was coded by Camryn Lee and is
+            This project was coded by{" "}
+            <a
+              href="https://www.linkedin.com/in/camrynalexx/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Camryn Lee{" "}
+            </a>{" "}
+            and is
             <a
               href="https://github.com/camrynalexx/react-weather-app.git"
-              target=""
+              target="_blank"
+              rel="noopener noreferrer"
               className="githubLink"
             >
               {" "}
@@ -89,16 +99,27 @@ export default function Weather(props) {
             and
             <a
               href="https://playful-kataifi-93547f.netlify.app"
-              target=""
+              target="_blank"
+              rel="noopener noreferrer"
               className="netlifyLink"
             >
               {" "}
               hosted on Netlify
             </a>
+            <p>
+              Background by Daniel Ramírez on{" "}
+              <a
+                href="https://unsplash.com/photos/q4TfWtnz_xw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                unsplash{" "}
+              </a>
+            </p>
           </footer>
         </div>
       </div>
-
     );
   } else {
     search();
