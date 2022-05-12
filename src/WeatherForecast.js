@@ -23,7 +23,7 @@ export default function WeatherForecast(props) {
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
               return (
-                <div className="col border rounded" key={index}>
+                <div className="col border rounded shadow" key={index}>
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
