@@ -19,6 +19,7 @@
 .Weather .greeting {
   font-family: "Zen Loop", cursive;
   font-size: 60px;
+  font-weight: 600;
 }
 
 .WeatherInfo {
@@ -137,7 +138,7 @@ hr {
 }
 
 .audioNote {
-  font-size: 24px;
+  font-size: 25px;
   font-family: "Zen Loop", cursive;
   position: relative;
   top: 15px;
